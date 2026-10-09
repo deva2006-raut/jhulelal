@@ -1,6 +1,9 @@
 # Freebuff workspace state
 .freebuff/
 
+# Vercel link (project/org ids are machine-local)
+.vercel/
+
 # Logs
 logs
 *.log
@@ -25,3 +28,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
