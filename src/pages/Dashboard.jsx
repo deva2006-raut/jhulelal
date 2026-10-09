@@ -45,13 +45,34 @@ export default function Dashboard() {
 
   return (
     <div className="space-y-8">
-      <div className="flex justify-between items-end">
-        <div>
-          <h1 className="text-3xl font-extrabold text-forest-950 tracking-tight">Orchard Overview</h1>
-          <p className="text-gray-500 mt-1 text-lg">Monitor the health and activities across your orange farm.</p>
-        </div>
-        <div className="text-sm font-medium px-4 py-2 bg-orange-100 text-orange-800 rounded-lg shadow-sm border border-orange-200">
-          DEMO DATA — Replace with actual orchard records
+      <div className="relative overflow-hidden rounded-3xl shadow-lg border border-forest-900/10 min-h-[15rem]">
+        <img
+          src="/images/hero-orchard.jpg"
+          alt="Rows of citrus trees in an orange orchard"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-forest-950/95 via-forest-950/80 to-forest-950/25" />
+        <div className="relative flex flex-col gap-6 p-7 md:flex-row md:items-end md:justify-between md:p-10">
+          <div className="max-w-2xl">
+            <h1 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Orchard Overview</h1>
+            <p className="mt-2 text-base text-forest-100/90 md:text-lg">
+              Monitor the health and activities across your orange farm in Nagpur and Vidarbha.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <div className="rounded-xl border border-white/20 bg-white/10 px-4 py-2.5 backdrop-blur-sm">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-forest-200">Zones</p>
+              <p className="text-lg font-extrabold text-white">{stats.zones}</p>
+            </div>
+            <div className="rounded-xl border border-white/20 bg-white/10 px-4 py-2.5 backdrop-blur-sm">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-forest-200">Trees</p>
+              <p className="text-lg font-extrabold text-white">{stats.trees}</p>
+            </div>
+            <div className="rounded-xl border border-white/20 bg-white/10 px-4 py-2.5 backdrop-blur-sm">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-forest-200">Region</p>
+              <p className="text-lg font-extrabold text-white">Nagpur</p>
+            </div>
+          </div>
         </div>
       </div>
 

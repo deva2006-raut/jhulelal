@@ -3,6 +3,15 @@ import { Upload, ImageIcon, RefreshCw, AlertTriangle, Info, XCircle, ShieldAlert
 import * as tf from '@tensorflow/tfjs';
 import * as mobilenet from '@tensorflow-models/mobilenet';
 
+// Reference photographs bundled with the app (see public/images/CREDITS.json).
+// These are for manual comparison only — the demo classifier does not diagnose disease.
+const SAMPLE_IMAGES = [
+  { id: 'healthy',    src: '/images/sample-healthy.jpg',    label: 'Healthy Leaf',    tone: 'text-forest-700',   ring: 'hover:border-forest-500' },
+  { id: 'canker',     src: '/images/sample-canker.jpg',     label: 'Citrus Canker',   tone: 'text-red-700',      ring: 'hover:border-red-500' },
+  { id: 'greening',   src: '/images/sample-greening.jpg',   label: 'Citrus Greening', tone: 'text-yellow-700',   ring: 'hover:border-yellow-500' },
+  { id: 'deficiency', src: '/images/sample-deficiency.jpg', label: 'Nutrient Deficiency', tone: 'text-orange-700', ring: 'hover:border-orange-500' },
+];
+
 export default function ImageAnalysis() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [analyzing, setAnalyzing] = useState(false);
@@ -236,7 +245,39 @@ export default function ImageAnalysis() {
               className="hidden" 
             />
           </div>
-          
+
+          {!selectedImage && (
+            <div className="mt-6">
+              <div className="flex items-baseline justify-between gap-3 mb-3">
+                <p className="text-xs font-bold uppercase tracking-wider text-gray-500">Reference samples</p>
+                <span className="text-[11px] text-gray-400">Tap to load</span>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                {SAMPLE_IMAGES.map((sample) => (
+                  <button
+                    key={sample.id}
+                    type="button"
+                    onClick={() => { setError(null); setResult(null); setSelectedImage(sample.src); }}
+                    className={`group text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-xl`}
+                  >
+                    <div className={`aspect-[4/3] overflow-hidden rounded-xl border-2 border-gray-200 bg-gray-100 transition-colors ${sample.ring}`}>
+                      <img
+                        src={sample.src}
+                        alt={sample.label}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                    <p className={`mt-2 text-xs font-bold leading-tight ${sample.tone}`}>{sample.label}</p>
+                  </button>
+                ))}
+              </div>
+              <p className="mt-3 text-[11px] leading-relaxed text-gray-400">
+                Bundled field photographs for side-by-side comparison. Uploading them runs the same relevance check as your own photos.
+              </p>
+            </div>
+          )}
+
           {error && (
             <div className="mt-4 p-4 bg-red-50 border border-red-100 text-red-700 rounded-xl flex gap-3 text-sm font-medium">
               <XCircle className="w-5 h-5 shrink-0" />

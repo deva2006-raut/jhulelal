@@ -61,6 +61,21 @@ export default function OrchardManagement() {
 
   return (
     <div className="space-y-8 max-w-7xl mx-auto">
+      <div className="relative overflow-hidden rounded-2xl border border-forest-900/10 shadow-sm">
+        <img
+          src="/images/grove-rows.jpg"
+          alt="Rows of citrus trees in a managed grove"
+          className="h-36 w-full object-cover object-center md:h-40"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-forest-950/85 via-forest-950/45 to-transparent" />
+        <div className="absolute inset-0 flex items-center px-6 md:px-8">
+          <p className="max-w-md text-sm font-medium text-forest-50 md:text-base">
+            Each zone groups trees by variety, planting year and inspection history so you can act on one block at a time.
+          </p>
+        </div>
+      </div>
+
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
         <div>
           <h1 className="text-3xl font-extrabold text-forest-950 tracking-tight">Orchard Zones</h1>

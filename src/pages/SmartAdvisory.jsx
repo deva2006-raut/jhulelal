@@ -34,9 +34,20 @@ export default function SmartAdvisory() {
 
   return (
     <div className="space-y-8 max-w-5xl mx-auto">
-      <div>
-        <h1 className="text-3xl font-extrabold text-forest-950 tracking-tight">Smart Farming Advisory</h1>
-        <p className="text-gray-500 mt-1 text-lg">Combined insights from weather, image analysis, and orchard observations.</p>
+      <div className="relative overflow-hidden rounded-2xl border border-forest-900/10 shadow-sm bg-forest-950">
+        <img
+          src="/images/orange-tree.jpg"
+          alt="Orange tree laden with ripe fruit"
+          className="absolute inset-0 h-full w-full object-cover object-right opacity-45"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-forest-950 via-forest-950/85 to-forest-950/30" />
+        <div className="relative p-6 md:p-8">
+          <h1 className="text-3xl font-extrabold text-white tracking-tight">Smart Farming Advisory</h1>
+          <p className="text-forest-100/90 mt-1 text-lg">
+            Combined insights from weather, image analysis, and orchard observations.
+          </p>
+        </div>
       </div>
 
       <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-6 flex gap-4 text-yellow-900">

@@ -1,0 +1,44 @@
+{
+  "hero-orchard.jpg": {
+    "title": "Citrus Orchard in Adana 01.jpg",
+    "author": "Zeynel Cebeci",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Citrus_Orchard_in_Adana_01.jpg"
+  },
+  "grove-rows.jpg": {
+    "title": "Citrus Orchard in Adana 05.jpg",
+    "author": "Zeynel Cebeci",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Citrus_Orchard_in_Adana_05.jpg"
+  },
+  "orange-tree.jpg": {
+    "title": "Orange-tree-1117420.jpg",
+    "author": "Hans Braxmeier (Hans)",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Orange-tree-1117420.jpg"
+  },
+  "sample-healthy.jpg": {
+    "title": "Daun Jeruk.jpg",
+    "author": "Herusutimbul",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Daun_Jeruk.jpg"
+  },
+  "sample-canker.jpg": {
+    "title": "Citrus Canker (20151109-APHIS-DB-0052).jpg",
+    "author": "USDAgov",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Citrus_Canker_(20151109-APHIS-DB-0052).jpg"
+  },
+  "sample-greening.jpg": {
+    "title": "Citrus Greening (20120120-APHIS-DB-0060).jpg",
+    "author": "USDAgov",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Citrus_Greening_(20120120-APHIS-DB-0060).jpg"
+  },
+  "sample-deficiency.jpg": {
+    "title": "Chlorose ferrique sur Citrus aurantium.jpg",
+    "author": "Eiku en exil",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chlorose_ferrique_sur_Citrus_aurantium.jpg"
+  }
+}
